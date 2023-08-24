@@ -28,10 +28,7 @@ let finalresults=[
     [2,4,6]
 ]
 
-function showresult(char){
-    message.innerText = char=="Draw"?`${char}`:`${char} Won`
-    result.style.visibility= "visible"
-}
+
 
 for(let i=0;i<box.length;i++){
     box[i].addEventListener("click",handleClick)
@@ -49,7 +46,7 @@ function handleClick(e){
 }
 
 if(count==9 && flag1==false){
-    showresult("DRAW");
+    showresult("Draw");
 }
 }
 
@@ -70,10 +67,14 @@ function checkwin(finalresults,arr,text){
 
     if(count==3 && flag.every((ele)=>ele==true)){
         flag1 = true
-        showresult(text)
+        showresult(text);
     }
 }
 
+function showresult(char){
+    message.innerText = char=="Draw"?`${char}`:`${char} Won`
+    result.style.visibility= "visible"
+}
 
 // to check the pattern of X:O
 // function checkresult(){
