@@ -72,8 +72,8 @@ function checkwin(finalresults,arr,text){
 }
 
 function showresult(char){
-    message.innerText = char=="Draw"?`${char}`:`${char} Won`
-    result.style.visibility= "visible"
+    message.innerText = char=="Draw"?`${char}`:`${char} Won`;
+    result.style.visibility= "visible";
 }
 
 // to check the pattern of X:O
